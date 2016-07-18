@@ -1,0 +1,23 @@
+<!-- BEGIN_MODULE Entry_Field -->
+<div class="acms-admin-edit-info">
+<dl>
+  <dt>field_test01</dt>
+  <dd>
+    <!-- BEGIN_IF [{field_test01}/eq/1] -->
+    テスト1にチェックが入っています
+    <!-- ELSE -->
+    テスト1にチェックが入っていません
+    <!-- END_IF -->
+  </dd>
+  <dt>field_test02</dt>
+  <dd>{field_test02}</dd>
+  <dt>field_test03</dt>
+  <dd>
+  <!-- BEGIN field_test03:loop -->
+  <!-- BEGIN glue -->, <!-- END glue -->
+  {field_test03}
+  <!-- END field_test03:loop -->
+  </dd>
+</dl>
+</div>
+<!-- END_MODULE Entry_Field -->

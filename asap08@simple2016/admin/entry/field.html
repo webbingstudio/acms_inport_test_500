@@ -1,0 +1,52 @@
+<table class="acms-admin-table-admin-edit">
+	<tr>
+		<th>テスト1</th>
+		<td>
+			<label class="acms-admin-form-checkbox" for="input-field_test01-1">
+				<input type="checkbox" name="field_test01[]" value="1" id="input-field_test01-1"{field_test01:checked#1} />
+				<i class="acms-admin-ico-checkbox"></i>チェックすると1が入ります
+			</label>
+			<input type="hidden" name="field[]" value="field_test01" />
+		</td>
+	</tr>
+	<tr>
+		<th>テスト2</th>
+		<td>
+			<input type="text" name="field_test02" value="{field_test02}" class="acms-admin-form-width-full"/>
+			<input type="hidden" name="field[]" value="field_test02" />
+		</td>
+	</tr>
+  <tr>
+		<th>テスト3</th>
+		<td>
+			<label class="acms-admin-form-checkbox" for="input-field_test03-みかん">
+				<input type="checkbox" name="field_test03[]" value="みかん" id="input-field_test03-みかん"{field_test03:checked#みかん} />
+				<i class="acms-admin-ico-checkbox"></i>みかん
+			</label>
+			<label class="acms-admin-form-checkbox" for="input-field_test03-林檎">
+				<input type="checkbox" name="field_test03[]" value="林檎" id="input-field_test03-林檎"{field_test03:checked#林檎} />
+				<i class="acms-admin-ico-checkbox"></i>林檎
+			</label>
+			<label class="acms-admin-form-checkbox" for="input-field_test03-ブドウ">
+				<input type="checkbox" name="field_test03[]" value="ブドウ" id="input-field_test03-ブドウ"{field_test03:checked#ブドウ} />
+				<i class="acms-admin-ico-checkbox"></i>ブドウ
+			</label>
+			<label class="acms-admin-form-checkbox" for="input-field_test03-banana">
+				<input type="checkbox" name="field_test03[]" value="banana" id="input-field_test03-banana"{field_test03:checked#banana} />
+				<i class="acms-admin-ico-checkbox"></i>banana
+			</label>
+			<input type="hidden" name="field[]" value="field_test03" />
+		</td>
+	</tr>
+</table>
+
+<!-- SEOの設定 -->
+<!--#include file="/admin/entry/seo.html" -->
+
+<!-- ピックアップの設定 -->
+<!--#include file="/admin/entry/pickup.html" -->
+
+<!-- コード別フィールドの表示 -->
+<!--#include file="/admin/entry/%{CCD}.html" -->
+<!--#include file="/admin/entry/%{ECD}" -->
+
