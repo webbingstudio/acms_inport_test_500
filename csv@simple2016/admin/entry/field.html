@@ -38,6 +38,31 @@
 			<input type="hidden" name="field[]" value="field_test03" />
 		</td>
 	</tr>
+	<tr>
+		<th>テスト4</th>
+		<td class="js-img_resize_cf">
+			<!-- BEGIN_IF [{field_test04@tinyPath}/em] -->
+			<img src="" style="display:none;width:240px;" class="js-img_resize_preview"/>
+			<!-- END_IF -->
+			<!-- BEGIN field_test04@path:veil -->
+			<img src="%{ARCHIVES_DIR}{field_test04@tinyPath}" style="width:240px;" class="js-img_resize_preview"/>
+			<input type="hidden" name="field_test04@old" value="{field_test04@path}" /><br />
+			<label class="acms-admin-form-checkbox">
+				<input type="checkbox" name="field_test04@edit" value="delete" />
+				<i class="acms-admin-ico-checkbox"></i> 削除
+			</label>
+			<!-- END field_test04@path:veil -->
+			<input type="file" name="field_test04" size="20" class="js-img_resize_input" /><br />
+			代替テキスト:<input type="text" name="field_test04@alt" value="{field_test04@alt}" size="40" />
+			<input type="hidden" name="field[]" value="field_test04" />
+			<input type="hidden" name="field_test04:extension" value="image" />
+			<input type="hidden" name="field_test04@size" value="960" />
+			<input type="hidden" name="field_test04@tinyWidth" value="240" />
+			<input type="hidden" name="field_test04@largeWidth" value="480" />
+			<input type="hidden" name="field_test04@squareWidth" value="240" />
+			<input type="hidden" name="field_test04@filename" value="" />
+		</td>
+	</tr>
 </table>
 
 <!-- SEOの設定 -->

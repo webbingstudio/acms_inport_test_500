@@ -1,0 +1,70 @@
+<!-- BEGIN_MODULE Entry_Field -->
+
+<div class="acms-admin-edit-info">
+  <dl>
+
+    <dt>テスト1</dt>
+    <dd>
+      <!-- BEGIN_IF [{field_test01}/eq/1] -->
+      テスト1にチェックが入っています
+      <!-- ELSE -->
+      テスト1にチェックが入っていません
+      <!-- END_IF -->
+    </dd>
+
+    <dt>テスト2</dt>
+    <dd>
+      <!-- BEGIN_IF [{field_test02}/nem] -->
+      {field_test02}
+      <!-- ELSE -->
+      テスト2は未入力です
+      <!-- END_IF -->
+    </dd>
+
+    <dt>テスト3</dt>
+    <dd>
+      <!-- BEGIN field_test03:loop -->
+      <!-- BEGIN_IF [{field_test03}/nem] -->
+      {field_test03}<!-- BEGIN glue -->, <!-- END glue -->
+      <!-- END_IF -->
+      <!-- END field_test03:loop -->
+    </dd>
+
+    <dt>テスト4</dt>
+    <dd>
+      <!-- BEGIN_IF [{field_test04@path}/nem] -->
+      <p>
+        アップロード画像:<br>
+        <a href="%{HTTP_ARCHIVES_DIR}{field_test04@path}">%{ARCHIVES_DIR}{field_test04@path}</a>
+      </p>
+      <p>
+        large:<br>
+        <a href="%{HTTP_ARCHIVES_DIR}{field_test04@largePath}">%{ARCHIVES_DIR}{field_test04@largePath}</a>
+      </p>
+      <p>
+        tiny:<br>
+        <img src="%{ARCHIVES_DIR}{field_test04@tinyPath}" alt="">
+      </p>
+      <p>
+        square:<br>
+        <img src="%{ARCHIVES_DIR}{field_test04@squarePath}" alt="">
+      </p>
+      <p>
+        alt:<br>
+        {field_test04@alt}
+      </p>
+      <!-- ELSE -->
+      画像は登録されていません
+      <!-- END_IF -->
+  </dl>
+
+  <hr>
+  <p>
+    ※マルチチェックボックスでループの最後を判定することはできません<br>
+    ※画像カスタムフィールドはlarge・tiny・squareの3サイズと代替テキストを同時に作成できますが、必須ではありません。squareは中心を起点に自動的に正方形にトリミングされます。<br>
+    ※アップロード画像は必ずしも元画像と同じサイズではありません。「コンフィグ＞編集設定」で設定された「拡大表示時の最大サイズ」を超えていた場合は、そのサイズまで縮小された状態で保存されています。
+  </p>
+
+</div>
+
+<!-- END_MODULE Entry_Field -->
